@@ -1,0 +1,7 @@
+USE demodb;
+CREATE TABLE users (
+                name varchar,
+                email varchar,
+                tel bigint,
+                PRIMARY KEY (name)
+              );

@@ -1,0 +1,7 @@
+DELETE email FROM
+users WHERE name = 
+'jsmith';
+
+DELETE FROM
+users WHERE name = 
+'jsmith';

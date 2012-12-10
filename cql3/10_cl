@@ -1,0 +1,9 @@
+INSERT INTO users
+(name, email)
+VALUES ('jsmith',
+'j@smith.com') USING 
+CONSISTENCY QUORUM;
+
+SELECT name, email FROM
+users WHERE tel = 333 
+USING CONSISTENCY ALL;

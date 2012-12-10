@@ -1,0 +1,4 @@
+UPDATE users SET email = 
+'me@smith.org', tel = 
+'222222'
+where name = 'jsmith';

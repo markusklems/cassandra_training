@@ -1,0 +1,7 @@
+SELECT name, email FROM
+users WHERE name = 
+'jsmith';
+
+SELECT name, email FROM
+users WHERE name = 
+'mjane';

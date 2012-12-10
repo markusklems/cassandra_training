@@ -1,0 +1,5 @@
+CREATE INDEX tel_index ON 
+users(tel);
+
+CREATE INDEX tel_index ON 
+users(tel);

@@ -1,0 +1,2 @@
+CREATE INDEX tel_index ON 
+users(tel);

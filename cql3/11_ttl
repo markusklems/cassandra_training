@@ -1,0 +1,4 @@
+INSERT INTO users
+(coupon)
+VALUES('free cake')
+USING TTL 86400;
