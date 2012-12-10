@@ -1,5 +1,8 @@
-INSERT INTO users
-(coupon)
-VALUES('free cake')
-WHERE name = 'mjane'
-USING TTL 86400;
+INSERT INTO users (name, coupon) 
+VALUES('twoods','free cake') 
+USING TTL 77;
+
+UPDATE users SET coupon =
+'free lunch'
+WHERE name = 'mjane' 
+USING TTL 55;

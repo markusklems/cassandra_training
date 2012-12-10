@@ -1,3 +1,7 @@
 INSERT INTO users (name, coupon) 
 VALUES('twoods','free cake') 
 USING TTL 77;
+
+UPDATE users USING TTL 55
+SET coupon = 'free lunch'
+WHERE name = 'mjane';
