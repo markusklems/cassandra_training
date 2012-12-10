@@ -1,5 +1,5 @@
 CREATE INDEX tel_index ON 
 users(tel);
 
-CREATE INDEX tel_index ON 
-users(tel);
+SELECT name, email FROM
+users WHERE tel = 333;
