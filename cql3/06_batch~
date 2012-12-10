@@ -1,10 +1,10 @@
 BEGIN BATCH
 INSERT INTO users(name,email)
-VALUES('jdoe','j@doe.net')
+VALUES('jdoe','j@doe.net');
 INSERT INTO users(name,tel)
-VALUES('mjordan',333)
+VALUES('mjordan',333);
 UPDATE users SET tel = 333 
-WHERE name = 'mjane'
+WHERE name = 'mjane';
 DELETE FROM users
-WHERE name = 'jsmith'
-APPLY BATCH;
+WHERE name = 'jsmith';
+APPLY BATCH
