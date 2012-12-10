@@ -1,0 +1,5 @@
+ALTER COLUMNFAMILY users
+ADD coupon text;
+
+ALTER COLUMNFAMILY users
+ALTER tel TYPE int;
