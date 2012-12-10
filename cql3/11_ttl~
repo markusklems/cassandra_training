@@ -1,4 +1,5 @@
 INSERT INTO users
 (coupon)
 VALUES('free cake')
+WHERE name = 'mjane'
 USING TTL 86400;
