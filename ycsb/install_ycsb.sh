@@ -5,7 +5,8 @@ for host in $@; do
 done
 #remove last character
 hosts=${hosts%?}
-wget https://github.com/downloads/brianfrankcooper/YCSB/ycsb-0.1.4.tar.gz
+#wget https://github.com/downloads/brianfrankcooper/YCSB/ycsb-0.1.4.tar.gz
+wget https://s3-eu-west-1.amazonaws.com/97392738827291663210374/ycsb-0.1.4.tar.gz
 tar xfvz ycsb-0.1.4.tar.gz
 rm ycsb-0.1.4.tar.gz
 # download bindings
