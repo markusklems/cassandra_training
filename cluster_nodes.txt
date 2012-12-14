@@ -1,0 +1,46 @@
++++ cluster setup +++
+
+cluster 1:
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-107-20-56-70.compute-1.amazonaws.com
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-54-242-205-56.compute-1.amazonaws.com
+
+cluster 2:
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-50-17-73-160.compute-1.amazonaws.com
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-184-72-210-133.compute-1.amazonaws.com
+
+cluster 3:
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-23-22-196-65.compute-1.amazonaws.com
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-184-72-147-57.compute-1.amazonaws.com
+
+cluster 4:
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-50-17-1-147.compute-1.amazonaws.com
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-54-234-4-102.compute-1.amazonaws.com
+
++++ scaling exercise +++
+
+cluster 1:
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-184-72-75-148.compute-1.amazonaws.com
+
+cluster 2:
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-174-129-158-185.compute-1.amazonaws.com
+
+cluster 3:
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-50-17-82-198.compute-1.amazonaws.com
+
+cluster 4:
+ssh -i /home/cassandra/.ssh/east1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-50-17-165-11.compute-1.amazonaws.com
+
+
++++ multi-dc exercise +++
+
+cluster 1:
+ssh -i /home/cassandra/.ssh/west1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-184-72-29-72.us-west-1.compute.amazonaws.com
+
+cluster 2:
+ssh -i /home/cassandra/.ssh/west1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-54-241-106-220.us-west-1.compute.amazonaws.com
+
+cluster 3:
+ssh -i /home/cassandra/.ssh/west1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-50-18-240-50.us-west-1.compute.amazonaws.com
+
+cluster 4:
+ssh -i /home/cassandra/.ssh/west1-training -o "UserKnownHostsFile /dev/null" -o StrictHostKeyChecking=no ubuntu@ec2-54-241-109-191.us-west-1.compute.amazonaws.com
