@@ -17,9 +17,7 @@ echo "hosts=$hosts" >> ycsb-0.1.4/workloads/workloada
 chmod +x ycsb-0.1.4/bin/ycsb
 # prepare cassandra keyspace for ycsb
 cat >create_ycsbtable <<END_OF_FILE
-create keyspace usertable with strategy_options = [{replication_factor:1}] and placement_strategy = 'org.apache.cassandra.locator.SimpleStrategy';
-use usertable;
-create column family data with comparator='AsciiType';
+create keyspace usertable with replication = {'class' : 'SimpleStrategy', 'replication_factor':1}; use usertable; create table data (key blob, column1 ascii, value blob, PRIMARY KEY(key,column1)) WITH COMPACT STORAGE;
 END_OF_FILE
 
-cassandra-cli -h localhost -f create_ycsbtable
+cqlsh -f create_ycsbtable
