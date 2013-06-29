@@ -20,5 +20,5 @@
 for ip in $@
 do
   echo "Accept outgoing traffic on port 7199 to $ip"
-  iptables -I OUTPUT -p tcp -m tcp -s $ip --dport 7199 -j ACCEPT
+  iptables -I OUTPUT -p tcp -m tcp -d $ip --dport 7199 -j ACCEPT
 done
