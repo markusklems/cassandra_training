@@ -42,7 +42,6 @@ if [ $java_version -eq 6 ]; then
   (cd $tmpdir; mv j* $target_dir)
   rm -rf $tmpdir
 elif [ $java_version -eq 7 ]; then
-  java_dir=${basename_of_url%-linux-x64}
   (cd $tmpdir; tar xzf $basename_of_url; rm -rf $basename_of_url)
   mkdir -p `dirname $target_dir`
   java_dir=`ls $tmpdir`
@@ -55,7 +54,7 @@ fi
 
 if which dpkg &> /dev/null; then
   update-alternatives --install /usr/bin/java java "$target_dir/$java_dir/bin/java" 17000
-  update-alternatives --set java $target_dir/bin/java
+  update-alternatives --set java "$target_dir/$java_dir/bin/java"
 elif which rpm &> /dev/null; then
   alternatives --install /usr/bin/java java "$target_dir/$java_dir/bin/java" 17000
   alternatives --set java "$target_dir/$java_dir/bin/java"
