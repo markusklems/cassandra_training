@@ -26,7 +26,7 @@ url=$2
 
 echo "Installing Java $1 from url $url"
 
-target_java_dir='/opt/java/64'
+target_dir='/opt/java/64'
 
 tmpdir=`mktemp -d`
 curl $url -L --silent --show-error --fail --connect-timeout 60 --max-time 600 --retry 5 -o $tmpdir/`basename $url`
