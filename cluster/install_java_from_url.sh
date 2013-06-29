@@ -21,8 +21,8 @@
 #
 # Install Oracle Java 1.6 or 1.7.
 
-url=$1
-java_version=${2:-6}
+java_version=${1:-6}
+url=$2
 
 target_java_dir='/opt/java/64'
 
