@@ -24,17 +24,19 @@
 java_version=$1
 url=$2
 
+echo "Installing Java $1 from url $url"
+
 target_java_dir='/opt/java/64'
 
 tmpdir=`mktemp -d`
 curl $url -L --silent --show-error --fail --connect-timeout 60 --max-time 600 --retry 5 -o $tmpdir/`basename $url`
 
-if [6 -e $java_version]; then
+if [$java_version -e 6]; then
   (cd $tmpdir; sh `basename $url` -noregister)
   mkdir -p `dirname $target_dir`
   (cd $tmpdir; mv jdk1* $target_dir)
   rm -rf $tmpdir
-elif [7 -e $java_version]; then
+elif [$java_version -e 7]; then
   (cd $tmpdir; tar xzf `basename $url`)
   mkdir -p `dirname $target_dir`
   (cd $tmpdir; mv jdk1* $target_dir)
