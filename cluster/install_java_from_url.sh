@@ -30,20 +30,20 @@ target_dir="/opt/java/64/oracle-java$java_version"
 mkdir $target_dir
 
 tmpdir=`mktemp -d`
-echo "Downloading ... Please wait ..."
+echo "Start downloading ..."
 basename_of_url=`basename $url`
-curl $url -L --silent --show-error --fail --connect-timeout 60 --max-time 600 --retry 5 -o "$tmpdir/$basename_of_url"
+curl $url -L --show-error --fail --connect-timeout 60 --max-time 600 --retry 5 -o "$tmpdir/$basename_of_url"
 
 echo "Unpacking the downloaded file."
 if [ $java_version -eq 6 ]; then
-  (cd $tmpdir; sh $basename_of_url --silent -noregister; rm -rf $basename_of_url)
+  (cd $tmpdir; sh $basename_of_url -noregister; rm -rf $basename_of_url)
   mkdir -p `dirname $target_dir`
   java_dir=`ls $tmpdir`
   (cd $tmpdir; mv j* $target_dir)
   rm -rf $tmpdir
 elif [ $java_version -eq 7 ]; then
   java_dir=${basename_of_url%-linux-x64}
-  (cd $tmpdir; tar --silent xzf $basename_of_url; rm -rf $basename_of_url)
+  (cd $tmpdir; tar xzf $basename_of_url; rm -rf $basename_of_url)
   mkdir -p `dirname $target_dir`
   java_dir=`ls $tmpdir`
   (cd $tmpdir; mv j* $target_dir)
@@ -54,10 +54,10 @@ else
 fi
 
 if which dpkg &> /dev/null; then
-  update-alternatives --install /usr/bin/java java "$target_dir/$java_dir/bin/java 17000"
+  update-alternatives --install /usr/bin/java java "$target_dir/$java_dir/bin/java" 17000
   update-alternatives --set java $target_dir/bin/java
 elif which rpm &> /dev/null; then
-  alternatives --install /usr/bin/java java "$target_dir/$java_dir/bin/java 17000"
+  alternatives --install /usr/bin/java java "$target_dir/$java_dir/bin/java" 17000
   alternatives --set java "$target_dir/$java_dir/bin/java"
 else
   # Assume there is no alternatives mechanism, create our own symlink
