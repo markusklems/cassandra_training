@@ -21,7 +21,7 @@
 #
 # Install Oracle Java 1.6 or 1.7.
 
-java_version=${1:-6}
+java_version=$1
 url=$2
 
 target_java_dir='/opt/java/64'
@@ -29,12 +29,12 @@ target_java_dir='/opt/java/64'
 tmpdir=`mktemp -d`
 curl $url -L --silent --show-error --fail --connect-timeout 60 --max-time 600 --retry 5 -o $tmpdir/`basename $url`
 
-if ["6" -e $java_version]; then
+if [6 -e $java_version]; then
   (cd $tmpdir; sh `basename $url` -noregister)
   mkdir -p `dirname $target_dir`
   (cd $tmpdir; mv jdk1* $target_dir)
   rm -rf $tmpdir
-elif ["7" -e $java_version]; then
+elif [7 -e $java_version]; then
   (cd $tmpdir; tar xzf `basename $url`)
   mkdir -p `dirname $target_dir`
   (cd $tmpdir; mv jdk1* $target_dir)
