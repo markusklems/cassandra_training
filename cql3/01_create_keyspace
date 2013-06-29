@@ -1,1 +1,3 @@
-CREATE KEYSPACE demodb WITH strategy_class = 'SimpleStrategy' AND strategy_options: replication_factor='1';
+CREATE KEYSPACE simpledb WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 2 };
+
+CREATE KEYSPACE twotterdb WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'DC1':2 };

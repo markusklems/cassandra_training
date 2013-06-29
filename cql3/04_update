@@ -1,4 +1,3 @@
 UPDATE users SET email = 
-'me@smith.org', tel = 
-'222222'
+'me@smith.org'
 where name = 'jsmith';

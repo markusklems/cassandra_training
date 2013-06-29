@@ -1,9 +1,27 @@
 INSERT INTO users
-(name, email)
-VALUES ('jsmith',
+(id, name, email)
+VALUES (101, 'jsmith',
 'j@smith.com');
 
 INSERT INTO users
-(name, email, tel)
-VALUES ('mjane',
-'m@jane.com',123456);
+(id, name)
+VALUES (102, 'mjane');
+
+INSERT INTO users
+(id, name)
+VALUES (103, 'otto');
+
+INSERT INTO users
+(id, name, email)
+VALUES (104, 'jim',
+'jim@abc.com');
+
+INSERT INTO users
+(id, name, email)
+VALUES (105, 'carl',
+'c@rl.de');
+
+INSERT INTO users
+(id, name, email)
+VALUES (106, 'heinz',
+'heinz@xyz.de');
