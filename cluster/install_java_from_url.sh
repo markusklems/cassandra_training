@@ -26,20 +26,21 @@ url=$2
 
 echo "Installing Java $1 from url $url"
 
-target_dir='/opt/java/64'
+target_dir="/opt/java/64/oracle-java$javaversion"
 
 tmpdir=`mktemp -d`
+echo "Downloading now ..."
 curl $url -L --silent --show-error --fail --connect-timeout 60 --max-time 600 --retry 5 -o $tmpdir/`basename $url`
 
 if [ $java_version -eq 6 ]; then
   (cd $tmpdir; sh `basename $url` -noregister)
   mkdir -p `dirname $target_dir`
-  (cd $tmpdir; mv jdk1* $target_dir)
+  (cd $tmpdir; mv j* $target_dir)
   rm -rf $tmpdir
 elif [ $java_version -eq 7 ]; then
   (cd $tmpdir; tar xzf `basename $url`)
   mkdir -p `dirname $target_dir`
-  (cd $tmpdir; mv jdk1* $target_dir)
+  (cd $tmpdir; mv j* $target_dir)
   rm -rf $tmpdir
 else
   echo "Error. Please input either the number 6 or the number 7 as java version that you would like to install."
