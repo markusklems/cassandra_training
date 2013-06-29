@@ -17,31 +17,5 @@
 #
 # Author: Markus Klems (2013)
 
-# Install JNA
-sudo yum install -y jna
-	
-# recommended by datastax
-sudo rpm -Uvh http://dl.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm
-
-# install cassandra
-echo "[datastax]
-name= DataStax Repo for Apache Cassandra
-baseurl=http://rpm.datastax.com/community
-enabled=1
-gpgcheck=0
-
-[opscenter]
-name= DataStax Repository
-baseurl=http://rpm.datastax.com/community
-enabled=1
-gpgcheck=0" | sudo tee -a /etc/yum.repos.d/datastax.repo
-
-sudo yum update
-sudo yum install -y dsc12 python-cql opscenter-free
-
-sleep 5
-
-myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'`
-sudo sed -i -e "s|interface = 127.0.0.1|interface = $myip|" /etc/opscenter/opscenterd.conf
-
-sudo service opscenterd start
+echo "Accept outgoing traffic on port 8888"
+sudo /sbin/iptables -A INPUT -p tcp --dport 8888 -j ACCEPT
