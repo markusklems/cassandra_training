@@ -22,18 +22,3 @@ do
   echo "Accept outgoing traffic on port 9160 to $ip"
   iptables -I OUTPUT -p tcp -m tcp -s $ip --dport 61621 -j ACCEPT
 done
-
-sudo iptables -I INPUT -p tcp -m tcp --dport 7199 -j ACCEPT
-sudo iptables -I INPUT -p tcp -m tcp --dport 7000 -j ACCEPT
-sudo iptables -I OUTPUT -p tcp -m tcp --dport 7000 -j ACCEPT
-sudo iptables -I OUTPUT -p tcp -m tcp --dport 7199 -j ACCEPT
-sudo iptables -I OUTPUT -p tcp -m tcp --dport 9160 -j ACCEPT
-sudo iptables -I OUTPUT -p tcp -m tcp --dport 9160 -j ACCEPT
-
-sudo iptables -I INPUT -p tcp -m tcp --dport 61621 -j ACCEPT
-sudo iptables -I OUTPUT -p tcp -m tcp --dport 61621 -j ACCEPT
-sudo iptables -I INPUT -p tcp -m tcp --dport 61622 -j ACCEPT
-sudo iptables -I OUTPUT -p tcp -m tcp --dport 61622 -j ACCEPT
-
-129.35.249.16
-129.35.211.157
