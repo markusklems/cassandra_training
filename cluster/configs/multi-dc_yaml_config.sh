@@ -18,7 +18,7 @@
 # Author: Markus Klems (2013)
 
 DC=${1:-DC1}
-RACk=${2:-RACK1}
+RACK=${2:-RACK1}
 
 if [ -f /etc/cassandra/cassandra.yaml ]; then
   config_file="/etc/cassandra/cassandra.yaml"
@@ -34,7 +34,7 @@ if [ -f /etc/cassandra/conf/cassandra-topology.properties ]; then
   sudo rm $topology_file
 fi
 sudo touch $topology_file
-echo "dc=$DC" sudo tee -a $topology_file
-echo "rack=$RACK" sudo tee -a $topology_file
+echo "dc=$DC" | sudo tee -a $topology_file
+echo "rack=$RACK" | sudo tee -a $topology_file
 
 sudo cassandra service restart
