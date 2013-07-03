@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>de.cassandratraining</groupId>
+  <artifactId>cassandratraining</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Cassandra Training</name>
+
+  <dependencies>
+     <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.6.4</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.jopt-simple</groupId>
+      <artifactId>jopt-simple</artifactId>
+      <version>4.0-beta1</version>
+    </dependency>
+<dependency>
+  <groupId>com.datastax.cassandra</groupId>
+  <artifactId>cassandra-driver-core</artifactId>
+  <version>1.0.0</version>
+</dependency>
+<dependency>
+  <groupId>com.netflix.astyanax</groupId>
+  <artifactId>astyanax-core</artifactId>
+  <version>1.56.37</version>
+</dependency>
+<dependency>
+  <groupId>com.netflix.astyanax</groupId>
+  <artifactId>astyanax-thrift</artifactId>
+  <version>1.56.37</version>
+</dependency>
+<dependency>
+  <groupId>com.netflix.astyanax</groupId>
+  <artifactId>astyanax-cassandra</artifactId>
+  <version>1.56.37</version>
+</dependency>
+  </dependencies>
+</project>
