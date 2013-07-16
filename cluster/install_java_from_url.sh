@@ -27,7 +27,7 @@ url=$2
 echo "Installing Java $1 from url $url"
 
 target_dir="/opt/java/64/oracle-java$java_version"
-mkdir $target_dir
+mkdir -p $target_dir
 
 tmpdir=`mktemp -d`
 echo "Start downloading ..."
