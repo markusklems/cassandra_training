@@ -64,7 +64,7 @@ else
 fi
 
 # Try to set JAVA_HOME in a number of commonly used locations
-export JAVA_HOME=$target_dir/$java_dir
+export JAVA_HOME="$target_dir/$java_dir"
 if [ -f /etc/profile ]; then
   echo export JAVA_HOME=$JAVA_HOME >> /etc/profile
 fi
