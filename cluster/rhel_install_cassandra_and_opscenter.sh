@@ -37,7 +37,7 @@ enabled=1
 gpgcheck=0" | sudo tee -a /etc/yum.repos.d/datastax.repo
 
 sudo yum update
-sudo yum install -y dsc12 python-cql opscenter-free
+sudo yum install -y dsc20 python-cql opscenter-free
 
 sleep 5
 
