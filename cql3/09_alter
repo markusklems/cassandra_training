@@ -1,5 +1,5 @@
-ALTER COLUMNFAMILY users
+ALTER TABLE users
   ADD password text;
 
-ALTER COLUMNFAMILY users
+ALTER TABLE users
   ADD password_reset_token text;
