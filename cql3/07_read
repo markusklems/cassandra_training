@@ -1,7 +1,4 @@
-SELECT name, email FROM
-users WHERE name = 
-'jsmith';
+SELECT name, email FROM users 
+  WHERE id = 101;
 
-SELECT name, email FROM
-users WHERE name = 
-'mjane';
+SELECT * FROM users;

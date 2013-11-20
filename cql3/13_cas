@@ -1,0 +1,14 @@
+INSERT INTO users
+  (id, name, email) VALUES
+  (110, 'franz', 'fr@nz.de')
+  IF NOT EXISTS;
+
+UPDATE users
+  SET email = 'franz@gmail.com'
+  WHERE id = 110
+  IF email = 'fr@nz.de';
+
+UPDATE users
+  SET email = 'franz@ABC.de'
+  WHERE id = 110
+  IF email = 'fr@nz.de';

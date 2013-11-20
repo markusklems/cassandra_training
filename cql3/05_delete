@@ -1,7 +1,5 @@
-DELETE email FROM
-users WHERE name = 
-'jsmith';
+DELETE email FROM users
+  WHERE id = 105;
 
-DELETE FROM
-users WHERE name = 
-'jsmith';
+DELETE FROM users
+  WHERE id = 106;

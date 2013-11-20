@@ -1,7 +1,7 @@
-INSERT INTO users (name, coupon) 
-VALUES('twoods','free cake') 
-USING TTL 77;
+INSERT INTO users (id, name, password_reset_token) 
+  VALUES(109, 'timo','abc-xyz-123') 
+  USING TTL 77;
 
-UPDATE users USING TTL 55
-SET coupon = 'free lunch'
-WHERE name = 'mjane';
+UPDATE users USING TTL 77
+  SET password_reset_token = '987-def-ABC'
+  WHERE name = 'linda';

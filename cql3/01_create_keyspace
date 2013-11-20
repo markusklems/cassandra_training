@@ -1,3 +1,0 @@
-CREATE KEYSPACE simpledb WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 2 };
-
-CREATE KEYSPACE twotterdb WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'DC1':2 };

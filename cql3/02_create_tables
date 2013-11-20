@@ -1,4 +1,4 @@
-USE twotterdb;
+USE twotter;
 CREATE TABLE users (
 	id int PRIMARY KEY,
 	name text,
@@ -12,4 +12,4 @@ CREATE TABLE messages (
 	PRIMARY KEY  (user_id, posted_on)
 );
 DESCRIBE TABLE users;
-DESCRIBE TABLE messages;
+DESCRIBE TABLE tweets;
