@@ -1,3 +1,5 @@
+USE twotter;
+
 INSERT INTO users
 (id, name, email)
 VALUES (101, 'otto',
