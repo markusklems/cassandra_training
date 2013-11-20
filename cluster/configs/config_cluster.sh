@@ -28,5 +28,5 @@ fi
 sed -i -e "s|- seeds: \"127.0.0.1\"|- seeds: \"${seed}\"|" $config_file
 sed -i -e "s|listen_address: localhost|listen_address: $myip|" $config_file
 sed -i -e "s|rpc_address: localhost|rpc_address: 0.0.0.0|" $config_file
-sed -i -e "s|initial_token|# initial_token|" $config_file
-sed -i -e "s|# num_tokens: 256|num_tokens: 256|" $config_file
+#sed -i -e "s|initial_token|# initial_token|" $config_file
+#sed -i -e "s|# num_tokens: 256|num_tokens: 256|" $config_file
