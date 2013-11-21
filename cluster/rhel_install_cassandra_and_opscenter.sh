@@ -44,4 +44,4 @@ sleep 5
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'`
 sudo sed -i -e "s|interface = 127.0.0.1|interface = $myip|" /etc/opscenter/opscenterd.conf
 
-sudo service opscenterd start
+#sudo service opscenterd start
