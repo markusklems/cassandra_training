@@ -6,4 +6,4 @@ curl -L http://debian.datastax.com/debian/repo_key | sudo apt-key add -
 sleep 2
 sudo apt-get update -y
 # Install DataStax Cassandra community edition
-sudo apt-get install -y python-cql dsc12 libjna-java
+sudo apt-get install -y python-cql dsc20 libjna-java
