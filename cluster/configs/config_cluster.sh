@@ -18,7 +18,7 @@
 # Author: Markus Klems (2013)
 
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'`
-seed=${1:-"127.0.0.1,127.0.0.1"}
+seed=${1:-"127.0.0.1"}
 if [ -f /etc/cassandra/cassandra.yaml ]; then
   config_file="/etc/cassandra/cassandra.yaml"
 fi
