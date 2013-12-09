@@ -13,7 +13,7 @@ mkdir -p $target_dir
 tmpdir=`mktemp -d`
 echo "Start downloading ..."
 basename_of_url=`basename $url`
-curl $url -L --show-error --fail --connect-timeout 60 --max-time 600 --retry 5 -o "$tmpdir/$basename_of_url"
+curl $url -L -k --show-error --fail --connect-timeout 60 --max-time 600 --retry 5 -o "$tmpdir/$basename_of_url"
 
 echo "Unpacking the downloaded file."
 if [ $java_version -eq 6 ]; then
